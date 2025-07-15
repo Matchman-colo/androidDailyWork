@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="#EEEED1">
+
+    <ImageView
+        android:id="@+id/ivCartImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCartName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="商品名称"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/ivCartImage"
+        app:layout_constraintTop_toTopOf="@id/ivCartImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/tvCartDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="商品描述"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/tvCartName"
+        app:layout_constraintTop_toBottomOf="@id/tvCartName"
+        app:layout_constraintEnd_toEndOf="@id/tvCartName"
+        android:layout_marginTop="2dp"/>
+
+
+    <TextView
+        android:id="@+id/tvCartPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥0.00"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvCartName"
+        app:layout_constraintTop_toBottomOf="@id/tvCartDesc"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvCartCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数量：1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tvCartPrice"
+        app:layout_constraintTop_toTopOf="@id/tvCartPrice"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/btnRemoveItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/btn_delete"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

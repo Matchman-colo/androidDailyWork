@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBDCED"
+    >
+
+    <!-- 引用标题栏 -->
+    <include layout="@layout/title_shopping" />
+
+    <!-- 商品网格展示 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGoods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        />
+
+    <!-- 购物车商品总数显示 -->
+    <TextView
+        android:id="@+id/tvCartCount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="购物车: 0"
+        android:textSize="18sp"
+        android:background="#ACED57"
+        android:textColor="#284E4E"
+        />
+</LinearLayout>
